@@ -1,10 +1,10 @@
-import { useContext, useEffect, useRef } from "react";
+import { Trash2, X } from "lucide-react";
+import { useContext, useRef } from "react";
 import { alertContext } from "../../contexts/alertContext";
-import SingleAlert from "./components/singleAlertComponent";
-import { AlertDropdownType } from "../../types/alerts";
 import { PopUpContext } from "../../contexts/popUpContext";
+import { AlertDropdownType } from "../../types/alerts";
 import { useOnClickOutside } from "../hooks/useOnClickOutside";
-import { X, Trash2 } from "lucide-react";
+import SingleAlert from "./components/singleAlertComponent";
 
 export default function AlertDropdown({}: AlertDropdownType) {
   const { closePopUp } = useContext(PopUpContext);
@@ -24,7 +24,7 @@ export default function AlertDropdown({}: AlertDropdownType) {
   return (
     <div
       ref={componentRef}
-      className="z-10 flex h-[500px] w-[400px] flex-col overflow-hidden rounded-md bg-background px-2 py-3 pb-4 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+      className="z-10 flex h-[500px] w-[400px] flex-col overflow-hidden rounded-md bg-muted px-2 py-3 pb-4 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
     >
       <div className="text-md flex flex-row justify-between pl-3 font-medium text-foreground">
         Notifications
